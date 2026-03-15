@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import projects from '../data/projects'
 
 function WorkList() {
@@ -7,7 +8,7 @@ function WorkList() {
       <ul className="work-list">
         {projects.map((p) => (
           <li key={p.id}>
-            <a href={p.href} className="work-item">
+            <Link to={`/work/${p.slug}`} className="work-item">
               <span className="work-index">{p.id}</span>
 
               <div className="work-content">

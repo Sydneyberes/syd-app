@@ -3,6 +3,7 @@
 const projects = [
   {
     id: '01',
+    slug: 'meridian',
     title: 'Meridian',
     category: 'Mobile App',
     tags: ['iOS', 'Product Design', 'User Research'],
@@ -14,6 +15,7 @@ const projects = [
   },
   {
     id: '02',
+    slug: 'prism',
     title: 'Prism',
     category: 'Web / SaaS',
     tags: ['Dashboard', 'Data Visualisation', 'Design System'],
@@ -25,6 +27,7 @@ const projects = [
   },
   {
     id: '03',
+    slug: 'forma-ds',
     title: 'Forma DS',
     category: 'Design System',
     tags: ['Components', 'Tokens', 'Documentation'],
