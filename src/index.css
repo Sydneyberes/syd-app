@@ -423,23 +423,26 @@ body::before {
    REFERENCES
    =========================== */
 
-.ref-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 680px;
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
 }
 
-.ref-item {
+.ref-card {
   margin: 0;
-  padding: 0;
+  padding: 20px 22px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .ref-quote {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.75;
   color: var(--text-2);
   margin: 0;
@@ -449,12 +452,24 @@ body::before {
 .ref-author {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ref-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ref-title {
   font-size: 12px;
   color: var(--text-3);
 }
 
 .ref-sep {
+  font-size: 12px;
+  color: var(--text-3);
   opacity: 0.4;
   user-select: none;
 }

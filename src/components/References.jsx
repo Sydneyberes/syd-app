@@ -4,14 +4,14 @@ function References() {
   return (
     <section className="section" id="references">
       <p className="section-label">References</p>
-      <div className="ref-list">
+      <div className="ref-grid">
         {testimonials.map((t) => (
-          <blockquote key={t.id} className="ref-item">
+          <blockquote key={t.id} className="ref-card">
             <p className="ref-quote">"{t.quote}"</p>
             <footer className="ref-author">
-              {t.name}
+              <span className="ref-name">{t.name}</span>
               <span className="ref-sep">·</span>
-              {t.title}, {t.company}
+              <span className="ref-title">{t.title}, {t.company}</span>
             </footer>
           </blockquote>
         ))}
