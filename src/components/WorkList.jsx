@@ -30,7 +30,7 @@ function WorkList() {
               <div className="work-thumb-wrap">
                 <div className={`work-thumb work-thumb--${p.type}`} aria-hidden="true" />
               </div>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
