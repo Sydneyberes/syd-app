@@ -66,28 +66,28 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   padding: 6px 6px 6px 16px;
   isolation: isolate;
 
-  /* Transparent enough to see blur working */
-  background: rgba(250, 246, 240, 0.22);
-  backdrop-filter: blur(24px) saturate(220%) brightness(1.08);
-  -webkit-backdrop-filter: blur(24px) saturate(220%) brightness(1.08);
+  /* Nearly transparent — let the page color show through */
+  background: rgba(255, 251, 245, 0.06);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 
   border-radius: var(--r-pill);
-  /* Top edge bright like light hitting glass, sides/bottom subtler */
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-bottom-color: rgba(148, 138, 122, 0.22);
+  /* Bright top edge + barely-there sides = glass reading */
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom-color: rgba(120, 108, 90, 0.18);
 
   box-shadow:
-    /* strong inner top highlight — key to reading as glass */
-    inset 0 1.5px 0 rgba(255, 255, 255, 0.9),
-    /* subtle inner bottom edge */
-    inset 0 -0.5px 0 rgba(140, 128, 110, 0.18),
-    /* tight base shadow */
-    0 1px 2px rgba(55, 44, 32, 0.08),
-    /* diffused ambient shadow */
-    0 6px 24px rgba(55, 44, 32, 0.1);
+    /* bright specular on top lip — most important glass cue */
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+    /* faint inner bottom edge */
+    inset 0 -0.5px 0 rgba(110, 96, 76, 0.14),
+    /* close shadow for lift */
+    0 1px 3px rgba(50, 38, 24, 0.1),
+    /* soft ambient depth */
+    0 6px 20px rgba(50, 38, 24, 0.08);
 }
 
-/* Top-half gloss sheen — the optical quality that reads as glass */
+/* Gloss sheen on top half */
 .nav::before {
   content: '';
   position: absolute;
@@ -95,8 +95,8 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   border-radius: inherit;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.0)  55%
+    rgba(255, 255, 255, 0.14) 0%,
+    transparent 50%
   );
   pointer-events: none;
   z-index: -1;
