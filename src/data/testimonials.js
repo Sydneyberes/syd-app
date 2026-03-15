@@ -15,6 +15,14 @@ const testimonials = [
     title: 'VP Operations',
     company: 'Duffl',
   },
+  {
+    id: 3,
+    quote:
+      "Syd's become our tech org's superpower at Curri for exploring new ideas, simplifying complex ones, and making everything beautiful. I love how she keeps an open mind (always super curious) and then aces the problem.",
+    name: 'Brian Gonzalez',
+    title: 'CTO',
+    company: 'Curri',
+  },
 ]
 
 export default testimonials
