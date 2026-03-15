@@ -296,133 +296,58 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
 }
 
 /* ===========================
-   WORK BLOCKS — full-bleed timeline
+   WORK ENTRIES — Jenny Wen-style timeline
    =========================== */
 
-.work-blocks {
+.work-entries {
   display: flex;
   flex-direction: column;
-  gap: 88px;
+  gap: 64px;
+  max-width: 680px;
 }
 
-/* Image group */
-.work-block-images {
-  display: block;
-  text-decoration: none;
-  margin-bottom: 18px;
-}
-
-.work-block-hero {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--bg-raised);
-  border-radius: 10px;
-  margin-bottom: 6px;
-  overflow: hidden;
-  position: relative;
-  transition: opacity 0.2s var(--ease);
-}
-
-.work-block-images:hover .work-block-hero,
-.work-block-images:hover .work-block-thumb {
-  opacity: 0.7;
-}
-
-/* UI skeleton lines on hero */
-.work-block-hero::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  height: 7px;
-  background: var(--border);
-  border-radius: 3px;
-}
-
-.work-block-hero::after {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  right: 38%;
-  height: 1px;
-  background: var(--border-light);
-  box-shadow: 0 12px 0 var(--border-light), 0 24px 0 var(--border-light);
-}
-
-.work-block-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-}
-
-.work-block-thumb {
-  aspect-ratio: 4 / 3;
-  background: var(--bg-raised);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  transition: opacity 0.2s var(--ease);
-}
-
-.work-block-thumb::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-}
-
-.work-block-thumb::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  right: 25px;
-  height: 1px;
-  background: var(--border-light);
-  box-shadow: 0 7px 0 var(--border-light);
-}
-
-/* Info below images */
-.work-block-info {
+.work-entry {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
-.work-block-meta {
+.work-entry-header {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.work-block-title {
-  font-size: clamp(18px, 2.4vw, 26px);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  color: var(--text);
+.work-entry-date {
+  font-size: 12px;
+  color: var(--text-3);
   margin: 0;
-  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
 }
 
-.work-block-title a {
+.work-entry-title {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text);
+}
+
+.work-entry-title a {
   text-decoration: none;
   color: inherit;
   transition: opacity 0.15s;
 }
 
-.work-block-title a:hover { opacity: 0.6; }
+.work-entry-title a:hover { opacity: 0.55; }
 
-.work-block-year {
-  font-size: 12px;
-  color: var(--text-3);
-  font-variant-numeric: tabular-nums;
-  flex-shrink: 0;
+.work-entry-desc {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* Shared tag styles (also used in WorkDetail) */
@@ -441,35 +366,52 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   padding: 2px 9px;
 }
 
-.work-block-desc {
-  font-size: 15px;
-  color: var(--text-2);
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0;
-}
-
-.work-block-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  color: var(--text-3);
-  font-weight: 500;
+/* 2-up image grid */
+.work-entry-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
   text-decoration: none;
-  transition: color 0.15s;
-  width: fit-content;
+  transition: opacity 0.2s var(--ease);
 }
 
-.work-block-cta:hover { color: var(--text); }
+.work-entry-images:hover { opacity: 0.72; }
+
+.work-entry-img {
+  aspect-ratio: 3 / 2;
+  background: var(--bg-raised);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-entry-img::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 5px;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.work-entry-img::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  right: 28px;
+  height: 1px;
+  background: var(--border-light);
+  box-shadow: 0 8px 0 var(--border-light), 0 16px 0 var(--border-light);
+}
 
 .work-arrow {
   display: inline-block;
   transition: transform 0.15s var(--ease);
   font-size: 11px;
 }
-
-.work-block-cta:hover .work-arrow { transform: translate(2px, -2px); }
 
 /* ===========================
    REFERENCES
