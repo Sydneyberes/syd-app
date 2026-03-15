@@ -423,27 +423,25 @@ body::before {
    REFERENCES
    =========================== */
 
-.ref-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.ref-card {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 24px;
+.ref-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 40px;
+  max-width: 680px;
+}
+
+.ref-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ref-quote {
   font-size: 15px;
-  line-height: 1.7;
-  color: var(--text);
+  line-height: 1.75;
+  color: var(--text-2);
   margin: 0;
   font-weight: 400;
 }
@@ -451,36 +449,14 @@ body::before {
 .ref-author {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.ref-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--border);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-2);
-  flex-shrink: 0;
-  letter-spacing: 0.02em;
-}
-
-.ref-name {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  margin: 0 0 2px;
-}
-
-.ref-title {
+  gap: 8px;
   font-size: 12px;
   color: var(--text-3);
-  margin: 0;
+}
+
+.ref-sep {
+  opacity: 0.4;
+  user-select: none;
 }
 
 /* ===========================
