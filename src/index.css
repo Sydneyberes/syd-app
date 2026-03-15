@@ -64,24 +64,42 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   align-items: center;
   gap: 2px;
   padding: 6px 6px 6px 16px;
+  isolation: isolate;
 
-  /* Liquid glass */
-  background: linear-gradient(
-    135deg,
-    rgba(255, 253, 249, 0.72) 0%,
-    rgba(245, 241, 235, 0.58) 50%,
-    rgba(255, 252, 247, 0.68) 100%
-  );
-  backdrop-filter: blur(28px) saturate(180%) brightness(1.04);
-  -webkit-backdrop-filter: blur(28px) saturate(180%) brightness(1.04);
-  border: 1px solid rgba(255, 252, 247, 0.7);
-  border-bottom-color: rgba(200, 194, 184, 0.45);
+  /* Transparent enough to see blur working */
+  background: rgba(250, 246, 240, 0.22);
+  backdrop-filter: blur(24px) saturate(220%) brightness(1.08);
+  -webkit-backdrop-filter: blur(24px) saturate(220%) brightness(1.08);
+
   border-radius: var(--r-pill);
+  /* Top edge bright like light hitting glass, sides/bottom subtler */
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-bottom-color: rgba(148, 138, 122, 0.22);
+
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.75),
-    inset 0 -1px 0 rgba(180, 172, 160, 0.2),
-    0 2px 8px rgba(80, 70, 55, 0.08),
-    0 8px 24px rgba(80, 70, 55, 0.06);
+    /* strong inner top highlight — key to reading as glass */
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.9),
+    /* subtle inner bottom edge */
+    inset 0 -0.5px 0 rgba(140, 128, 110, 0.18),
+    /* tight base shadow */
+    0 1px 2px rgba(55, 44, 32, 0.08),
+    /* diffused ambient shadow */
+    0 6px 24px rgba(55, 44, 32, 0.1);
+}
+
+/* Top-half gloss sheen — the optical quality that reads as glass */
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.0)  55%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
 .nav-name {
