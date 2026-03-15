@@ -3,16 +3,18 @@
    =========================== */
 
 :root {
-  --bg:           #0d0d0f;
-  --bg-subtle:    #111114;
-  --bg-raised:    #17171b;
-  --bg-overlay:   rgba(16, 16, 20, 0.72);
-  --text:         #ebebeb;
-  --text-2:       #7a7a84;
-  --text-3:       #46464e;
-  --border:       #222228;
-  --border-light: #1c1c22;
-  --placeholder:  #1a1a20;
+  /* Dark — warm charcoal, not cold blue-black */
+  --bg:           #100e0b;
+  --bg-subtle:    #151210;
+  --bg-raised:    #1e1a16;
+  --bg-overlay:   rgba(18, 15, 11, 0.68);
+  --text:         #ece7df;
+  --text-2:       #8a8178;
+  --text-3:       #524a43;
+  --border:       #2c2520;
+  --border-light: #231f1b;
+  --placeholder:  #201c18;
+  --accent:       #c4935a;   /* muted terracotta/amber — used sparingly */
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -22,38 +24,39 @@
   --ease:   cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* Light mode overrides */
+/* Light — warm parchment, not sterile white */
 [data-theme="light"] {
-  --bg:           #ffffff;
-  --bg-subtle:    #fafafa;
-  --bg-raised:    #f5f5f6;
-  --bg-overlay:   rgba(255, 255, 255, 0.72);
-  --text:         #0d0d0f;
-  --text-2:       #6b6b75;
-  --text-3:       #a0a0a8;
-  --border:       #e4e4e8;
-  --border-light: #f0f0f3;
-  --placeholder:  #ececee;
+  --bg:           #f7f3ed;
+  --bg-subtle:    #f2ede6;
+  --bg-raised:    #ece6de;
+  --bg-overlay:   rgba(247, 243, 237, 0.72);
+  --text:         #1a1612;
+  --text-2:       #6e6459;
+  --text-3:       #a89a8d;
+  --border:       #d8d0c6;
+  --border-light: #e4ddd4;
+  --placeholder:  #e4ddd4;
+  --accent:       #a0622a;
 }
 
 [data-theme="light"] .nav {
-  background: rgba(255, 255, 255, 0.55);
-  border-color: rgba(0, 0, 0, 0.08);
-  border-bottom-color: rgba(0, 0, 0, 0.1);
+  background: rgba(247, 243, 237, 0.6);
+  border-color: rgba(180, 160, 136, 0.3);
+  border-bottom-color: rgba(140, 120, 96, 0.2);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.95),
-    0 1px 2px rgba(0, 0, 0, 0.05),
-    0 8px 32px rgba(0, 0, 0, 0.07);
+    inset 0 1px 0 rgba(255, 248, 238, 0.9),
+    0 1px 2px rgba(60, 40, 20, 0.06),
+    0 8px 32px rgba(60, 40, 20, 0.07);
 }
 
 [data-theme="light"] .nav-cta {
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(30, 20, 10, 0.07);
   color: var(--text);
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(30, 20, 10, 0.1);
 }
 
 [data-theme="light"] .nav-cta:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(30, 20, 10, 0.12);
 }
 
 [data-theme="light"] .btn-ghost {
@@ -88,6 +91,20 @@ a { color: inherit; }
 img { display: block; max-width: 100%; }
 ul, ol { list-style: none; padding: 0; margin: 0; }
 
+/* Grain texture — organic warmth over the whole page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
 /* ===========================
    NAV — floating pill, centered, sticky
    =========================== */
@@ -105,16 +122,16 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   gap: 2px;
   padding: 6px 6px 6px 16px;
 
-  background: rgba(20, 20, 25, 0.6);
+  background: rgba(22, 17, 12, 0.62);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 
   border-radius: var(--r-pill);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 240, 210, 0.08);
   border-bottom-color: rgba(0, 0, 0, 0.5);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 1px 0 rgba(255, 240, 210, 0.07),
     0 1px 2px rgba(0, 0, 0, 0.4),
     0 8px 32px rgba(0, 0, 0, 0.32);
 }
@@ -203,17 +220,12 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
 }
 
 .hero-summary a {
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--border);
-  transition: text-decoration-color 0.15s;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.15s;
 }
 
-.hero-summary a:hover {
-  text-decoration-color: var(--text);
-}
+.hero-summary a:hover { opacity: 0.75; }
 
 .hero-links {
   display: flex;
@@ -525,6 +537,13 @@ ul, ol { list-style: none; padding: 0; margin: 0; }
   border: 1px solid var(--border);
   border-radius: var(--r-pill);
   padding: 4px 12px;
+}
+
+.about-tool--muted {
+  color: var(--text-3);
+  background: transparent;
+  border-color: var(--border-light);
+  font-style: italic;
 }
 
 /* Headshot placeholder */

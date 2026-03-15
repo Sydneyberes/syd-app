@@ -1,6 +1,12 @@
-const tools = [
-  'Figma', 'Prototyping', 'User Research', 'Design Systems',
-  'Framer', 'Usability Testing', 'Information Architecture', 'Notion',
+const skills = [
+  'UX Interviews', 'Journey Mapping', 'Usability Testing',
+  'Figma', 'Prototyping', 'Branding',
+  'Design Systems', 'Stakeholder Management',
+]
+
+const inspirations = [
+  'Human psychology', 'Jazz music', 'California',
+  'Mexico City', 'Generative AI', 'Minimalism', 'First principles',
 ]
 
 function About() {
@@ -10,26 +16,34 @@ function About() {
       <div className="about-grid">
         <div className="about-text">
           <h2>
-            Design is how I<br />
-            make sense of the world.
+            I help teams improve design,<br />
+            strategy, and user empathy.
           </h2>
           <p>
-            I'm a product designer with a passion for creating experiences
-            that feel effortless. I believe good design is invisible — it
-            gets out of the way and lets people accomplish what they actually
-            came to do.
+            I create elegant digital products driven by user research. My work
+            lives at the intersection of craft and clarity — I care as much
+            about how something feels to use as how it looks.
           </p>
           <p>
-            My background spans early-stage startups and growth-stage
-            products, where I've led design from zero-to-one features to
-            large-scale design system initiatives.
+            Based in Los Angeles. Inspired equally by the precision of good
+            engineering, the warmth of California light, and the energy of
+            Mexico City streets.
           </p>
 
           <div className="about-tools">
-            <p className="about-tools-label">Tools & skills</p>
+            <p className="about-tools-label">Skills</p>
             <div className="about-tools-grid">
-              {tools.map((tool) => (
-                <span key={tool} className="about-tool">{tool}</span>
+              {skills.map(s => (
+                <span key={s} className="about-tool">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="about-tools" style={{ marginTop: '20px' }}>
+            <p className="about-tools-label">Inspired by</p>
+            <div className="about-tools-grid">
+              {inspirations.map(i => (
+                <span key={i} className="about-tool about-tool--muted">{i}</span>
               ))}
             </div>
           </div>
