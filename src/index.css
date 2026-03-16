@@ -545,8 +545,6 @@ body::before {
 
 .about-tool--muted {
   color: var(--text-3);
-  background: transparent;
-  border-color: var(--border-light);
   font-style: italic;
 }
 
