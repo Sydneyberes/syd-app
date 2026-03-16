@@ -69,7 +69,7 @@
 }
 
 [data-theme="light"] .ref-card {
-  background: #ede8de;
+  background: #ece5d9;
 }
 
 /* ===========================
@@ -440,7 +440,7 @@ body::before {
 .ref-card {
   margin: 0;
   padding: 20px 22px;
-  background: var(--bg-raised);
+  background: #201b13;
   border: 1px solid var(--border-light);
   border-radius: 8px;
   display: flex;
