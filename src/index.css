@@ -3,17 +3,32 @@
    =========================== */
 
 :root {
-  /* Dark — warm charcoal */
-  --bg:           #2C2C28;
-  --bg-subtle:    #272723;
-  --bg-raised:    #353530;
+  /* Neutral ramp — warm gray */
+  --n-0:   #FCFCF3;
+  --n-50:  #F6F6EE;
+  --n-100: #F1F1E6;
+  --n-200: #DDDDD4;
+  --n-300: #C9C7BC;
+  --n-400: #AEABA1;
+  --n-500: #908D84;
+  --n-600: #706D65;
+  --n-700: #524F49;
+  --n-800: #3E3E39;
+  --n-900: #2C2C28;
+  --n-950: #1A1A17;
+
+  /* Dark mode semantics — Neutral 900 base */
+  --bg:           var(--n-900);
+  --bg-subtle:    var(--n-950);
+  --bg-raised:    var(--n-800);
   --bg-overlay:   rgba(44, 44, 40, 0.72);
-  --text:         #ddd8d0;
-  --text-2:       #736e68;
-  --text-3:       #434040;
-  --border:       #252422;
-  --border-light: #1e1d1b;
-  --placeholder:  #1c1b19;
+  --text:         var(--n-100);
+  --text-2:       var(--n-400);
+  --text-3:       var(--n-500);
+  --border:       var(--n-700);
+  --border-light: var(--n-800);
+  --placeholder:  var(--n-800);
+
   /* Sahara Sand accent ramp */
   --accent-50:  #F9FAEC;
   --accent-100: #F1F3CE;
@@ -37,19 +52,19 @@
   --ease:   cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* Light — shoji paper, kinari cloth */
+/* Light mode semantics — Neutral 0 base */
 [data-theme="light"] {
-  --bg:           #F1F1E6;
-  --bg-subtle:    #EAEADA;
-  --bg-raised:    #E6E6D8;
-  --bg-overlay:   rgba(240, 236, 228, 0.72);
-  --text:         #1a1918;
-  --text-2:       #6a6560;
-  --text-3:       #9e9890;
-  --border:       #cdc8c0;
-  --border-light: #d8d3ca;
-  --placeholder:  #d8d3ca;
-  --accent: #8A8844;   /* sahara sand on light bg */
+  --bg:           var(--n-0);
+  --bg-subtle:    var(--n-50);
+  --bg-raised:    var(--n-100);
+  --bg-overlay:   rgba(252, 252, 243, 0.72);
+  --text:         var(--n-900);
+  --text-2:       var(--n-600);
+  --text-3:       var(--n-500);
+  --border:       var(--n-200);
+  --border-light: var(--n-100);
+  --placeholder:  var(--n-200);
+  --accent: #8A8844;
 }
 
 [data-theme="light"] .nav {
@@ -63,13 +78,13 @@
 }
 
 [data-theme="light"] .nav-cta {
-  background: rgba(26, 18, 10, 0.06);
+  background: rgba(44, 44, 40, 0.06);
   color: var(--text);
-  border-color: rgba(26, 18, 10, 0.06);
+  border-color: rgba(44, 44, 40, 0.08);
 }
 
 [data-theme="light"] .nav-cta:hover {
-  background: rgba(26, 18, 10, 0.1);
+  background: rgba(44, 44, 40, 0.1);
 }
 
 [data-theme="light"] .btn-ghost {
@@ -82,14 +97,14 @@
 }
 
 [data-theme="light"] .ref-card {
-  background: #F8F8EE;
+  background: var(--n-50);
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 [data-theme="light"] .work-tag,
 [data-theme="light"] .about-tool {
-  background: #F8F8EE;
+  background: var(--n-50);
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
@@ -152,7 +167,7 @@ body::before {
   gap: 2px;
   padding: 6px 6px 6px 16px;
 
-  background: rgba(44, 44, 40, 0.18);
+  background: rgba(44, 44, 40, 0.22);
   backdrop-filter: blur(20px) saturate(120%);
   -webkit-backdrop-filter: blur(20px) saturate(120%);
 
@@ -414,7 +429,7 @@ body::before {
 .work-tag {
   font-size: 11px;
   color: var(--text-3);
-  background: #3A3A35;
+  background: var(--n-800);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 2px 9px;
@@ -579,7 +594,7 @@ body::before {
 .ref-card {
   margin: 0;
   padding: 20px 22px;
-  background: #3A3A35;
+  background: var(--n-800);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   display: flex;
@@ -672,7 +687,7 @@ body::before {
 .about-tool {
   font-size: 12px;
   color: var(--text-2);
-  background: #3A3A35;
+  background: var(--n-800);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 4px 12px;
