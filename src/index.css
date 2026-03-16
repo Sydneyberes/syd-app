@@ -3,11 +3,11 @@
    =========================== */
 
 :root {
-  /* Dark — sumi ink, ash, stone */
-  --bg:           #0e0e0d;
-  --bg-subtle:    #131312;
-  --bg-raised:    #1c1b19;
-  --bg-overlay:   rgba(14, 14, 13, 0.72);
+  /* Dark — warm charcoal */
+  --bg:           #2C2C28;
+  --bg-subtle:    #272723;
+  --bg-raised:    #353530;
+  --bg-overlay:   rgba(44, 44, 40, 0.72);
   --text:         #ddd8d0;
   --text-2:       #736e68;
   --text-3:       #434040;
@@ -39,9 +39,9 @@
 
 /* Light — shoji paper, kinari cloth */
 [data-theme="light"] {
-  --bg:           #f0ece4;
-  --bg-subtle:    #ebe6dd;
-  --bg-raised:    #e4dfd5;
+  --bg:           #F1F1E6;
+  --bg-subtle:    #EAEADA;
+  --bg-raised:    #E6E6D8;
   --bg-overlay:   rgba(240, 236, 228, 0.72);
   --text:         #1a1918;
   --text-2:       #6a6560;
@@ -82,14 +82,14 @@
 }
 
 [data-theme="light"] .ref-card {
-  background: #f5f1ea;
+  background: #F8F8EE;
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 [data-theme="light"] .work-tag,
 [data-theme="light"] .about-tool {
-  background: #f5f1ea;
+  background: #F8F8EE;
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
@@ -152,7 +152,7 @@ body::before {
   gap: 2px;
   padding: 6px 6px 6px 16px;
 
-  background: rgba(14, 14, 13, 0.18);
+  background: rgba(44, 44, 40, 0.18);
   backdrop-filter: blur(20px) saturate(120%);
   -webkit-backdrop-filter: blur(20px) saturate(120%);
 
@@ -396,7 +396,7 @@ body::before {
 .work-tag {
   font-size: 11px;
   color: var(--text-3);
-  background: #201f1c;
+  background: #3A3A35;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 2px 9px;
@@ -460,7 +460,7 @@ body::before {
 .ref-card {
   margin: 0;
   padding: 20px 22px;
-  background: #201f1c;
+  background: #3A3A35;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   display: flex;
@@ -553,7 +553,7 @@ body::before {
 .about-tool {
   font-size: 12px;
   color: var(--text-2);
-  background: #201f1c;
+  background: #3A3A35;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 4px 12px;
