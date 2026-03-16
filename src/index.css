@@ -3,8 +3,6 @@
    =========================== */
 
 :root {
-  --video-overlay: rgba(10, 8, 5, 0.94);
-
   /* Dark — warm charcoal, not cold blue-black */
   --bg:           #100e0b;
   --bg-subtle:    #151210;
@@ -28,7 +26,6 @@
 
 /* Light — warm parchment, not sterile white */
 [data-theme="light"] {
-  --video-overlay: rgba(247, 243, 237, 0.95);
   --bg:           #f7f3ed;
   --bg-subtle:    #f2ede6;
   --bg-raised:    #ece6de;
@@ -79,13 +76,11 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg); /* video fallback */
 }
 
 body {
   margin: 0;
-  background: transparent;
-  position: relative; /* establishes stacking context */
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font);
   font-size: 15px;
@@ -95,37 +90,6 @@ body {
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-/* ===========================
-   BACKGROUND VIDEO
-   =========================== */
-
-.bg-video-wrap {
-  position: fixed;
-  inset: 0;
-  z-index: -1; /* behind all body content, above html bg */
-  overflow: hidden;
-}
-
-.bg-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--video-overlay);
-  /* Gentle gradient so bottom of page feels slightly more grounded */
-  background: linear-gradient(
-    to bottom,
-    var(--video-overlay) 0%,
-    color-mix(in srgb, var(--video-overlay) 88%, var(--bg)) 100%
-  );
-}
 
 a { color: inherit; }
 img { display: block; max-width: 100%; }
