@@ -3,7 +3,7 @@
    =========================== */
 
 :root {
-  --video-overlay: rgba(10, 8, 5, 0.89);
+  --video-overlay: rgba(10, 8, 5, 0.94);
 
   /* Dark — warm charcoal, not cold blue-black */
   --bg:           #100e0b;
@@ -28,7 +28,7 @@
 
 /* Light — warm parchment, not sterile white */
 [data-theme="light"] {
-  --video-overlay: rgba(247, 243, 237, 0.91);
+  --video-overlay: rgba(247, 243, 237, 0.95);
   --bg:           #f7f3ed;
   --bg-subtle:    #f2ede6;
   --bg-raised:    #ece6de;
