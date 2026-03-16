@@ -344,14 +344,16 @@ body::before {
   padding: 80px var(--px);
 }
 
-.section-label {
+.section-label,
+.about-tools-label {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-3);
   font-weight: 500;
-  margin-bottom: 40px;
 }
+
+.section-label { margin-bottom: 40px; }
 
 /* ===========================
    WORK ENTRIES — Jenny Wen-style timeline
@@ -421,7 +423,7 @@ body::before {
 .work-entry-desc {
   font-size: 15px;
   color: var(--text-2);
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0;
 }
 
@@ -610,7 +612,7 @@ body::before {
 }
 
 .ref-quote {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--text-2);
   margin: 0;
@@ -674,14 +676,7 @@ body::before {
   margin-top: 32px;
 }
 
-.about-tools-label {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  font-weight: 500;
-  margin-bottom: 12px;
-}
+.about-tools-label { margin-bottom: 12px; }
 
 .about-tools-grid {
   display: flex;
@@ -690,7 +685,7 @@ body::before {
 }
 
 .about-tool {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-2);
   background: var(--n-800);
   border: 1px solid rgba(255, 255, 255, 0.04);
@@ -765,9 +760,9 @@ body::before {
 }
 
 .work-detail-sub {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-2);
-  line-height: 1.65;
+  line-height: 1.75;
   margin: 0;
   max-width: 520px;
 }
@@ -885,7 +880,7 @@ body::before {
 }
 
 .blog-header p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-2);
   margin: 0;
 }
