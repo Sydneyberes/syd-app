@@ -27,7 +27,7 @@
   --accent-900: #5F4824;
   --accent-950: #362712;
 
-  --accent: #A48D2A;   /* 600 — warm olive gold on dark */
+  --accent: #DCDA73;   /* 300 — sahara sand on dark */
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -49,7 +49,7 @@
   --border:       #cdc8c0;
   --border-light: #d8d3ca;
   --placeholder:  #d8d3ca;
-  --accent: #6E5625;   /* 800 — deep olive on light bg */
+  --accent: #8A8844;   /* sahara sand on light bg */
 }
 
 [data-theme="light"] .nav {
