@@ -3,12 +3,12 @@ function Hero() {
     <section className="hero">
       <h1 className="hero-name">Sydney Beres</h1>
       <p className="hero-summary">
-        Product designer based in Los Angeles.
+        Product designer in Los Angeles.
+        {' '}I care about making things that feel good to use — not just good to look at.
         {' '}Currently at{' '}
         <a href="https://curri.com" target="_blank" rel="noreferrer">Curri</a>,
         {' '}previously{' '}
         <a href="https://duffl.com" target="_blank" rel="noreferrer">Duffl</a>.
-        {' '}I make things that are functional, beautiful, and easy to love.
         {' '}Open to new work.
       </p>
       <nav className="hero-links">

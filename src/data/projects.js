@@ -9,7 +9,7 @@ const projects = [
     tags: ['Product Design', 'Design Systems', 'Mobile', 'B2B'],
     year: '2024',
     description:
-      'Leading product design at a B2B logistics platform. Exploring new ideas, simplifying complex workflows, and building the design system that scales across the org.',
+      'I spend most of my time at Curri figuring out how to make logistics software feel less like logistics software. That means a lot of research, a lot of simplification, and building a design system the whole team can actually use.',
     type: 'web',
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     tags: ['UX Design', 'Branding', 'User Research'],
     year: '2023',
     description:
-      'Full UX redesign and brand refresh for a last-mile delivery startup. Drove a 12% conversion increase through user interviews, journey mapping, and iterative prototyping.',
+      'Duffl was fast-paced and a little chaotic in the best way. I did the full UX redesign and brand refresh — talked to a lot of users, mapped out where things were breaking, and rebuilt the experience from the ground up. Conversion went up 12%.',
     type: 'web',
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     tags: ['UX Design', 'Task Analysis', 'SaaS'],
     year: '2022',
     description:
-      'Rental car SaaS product. Designed the knowledge and program creation flow — taking a complex fleet management process and making it something people actually want to use.',
+      'Fleet management is genuinely complicated. At Rummo I designed the knowledge and program creation flow — the hard part was figuring out how to make something that experts use every day feel intuitive to someone new.',
     type: 'web',
   },
 ]
