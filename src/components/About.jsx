@@ -48,8 +48,8 @@ function About() {
           </div>
         </div>
 
-        <div className="about-photo" aria-hidden="true">
-          <span className="about-photo-label">Photo coming soon</span>
+        <div className="about-photo">
+          <img src="/headshot.jpg" alt="Sydney Beres" className="about-photo-img" />
         </div>
       </div>
     </section>
