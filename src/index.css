@@ -342,10 +342,27 @@ body::before {
   max-width: 680px;
 }
 
+/* Entrance animation — triggered by .is-visible class via useInView */
 .work-entry {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+}
+
+.work-entry.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-entry {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .work-entry-header {
@@ -440,6 +457,107 @@ body::before {
   background: var(--border-light);
   box-shadow: 0 8px 0 var(--border-light), 0 16px 0 var(--border-light);
 }
+
+/* Case study link */
+.work-entry-cta {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--text-3);
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 0.15s var(--ease);
+}
+
+.work-entry-cta:hover { color: var(--text); }
+
+/* ===========================
+   PROJECT PREVIEW
+   =========================== */
+
+.preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preview-frames {
+  position: relative;
+  aspect-ratio: var(--preview-aspect, 16 / 7);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-raised);
+}
+
+.preview-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease);
+}
+
+.preview-frame.is-active { opacity: 1; }
+
+.preview-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s var(--ease);
+}
+
+.preview-frames:hover .preview-caption { opacity: 1; }
+
+[data-theme="light"] .preview-caption { color: rgba(0, 0, 0, 0.4); }
+
+/* Tab selectors */
+.preview-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dot style (≤3 frames) */
+.preview-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s var(--ease), transform 0.15s var(--ease);
+}
+
+.preview-dot.is-active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+.preview-dot:hover:not(.is-active) { background: var(--text-3); }
+
+/* Pill style (4+ frames) */
+.preview-tab {
+  font-size: 11px;
+  color: var(--text-3);
+  background: transparent;
+  border: none;
+  padding: 3px 0;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: color 0.15s var(--ease);
+  font-family: var(--font);
+}
+
+.preview-tab.is-active { color: var(--text); }
+.preview-tab:hover:not(.is-active) { color: var(--text-2); }
 
 .work-arrow {
   display: inline-block;
