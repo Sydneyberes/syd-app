@@ -16,18 +16,17 @@ function About() {
       <div className="about-grid">
         <div className="about-text">
           <h2>
-            I'm good at helping teams<br />
-            be more ambitious together.
+            Designer. Occasional overthinker.<br />
+            Usually the one asking why.
           </h2>
           <p>
-            Most of my work involves figuring out what people actually need —
-            then making it simple enough that no one has to think too hard.
-            I do a lot of research, a lot of sketching, and a lot of asking
-            "why does it work this way?"
+            I work at the intersection of research and craft — figuring out
+            what's broken, then making the fix feel obvious in hindsight.
+            Mostly I just care that things work well for the people using them.
           </p>
           <p>
-            Based in Los Angeles. I draw a lot of inspiration from California
-            light, Mexico City energy, and anything that's quietly well-made.
+            Based in Los Angeles. Fueled by California light, Mexico City
+            street food, and jazz I can't name.
           </p>
 
           <div className="about-tools">
