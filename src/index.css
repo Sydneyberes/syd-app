@@ -72,6 +72,11 @@
   background: #ece5d9;
 }
 
+[data-theme="light"] .work-tag,
+[data-theme="light"] .about-tool {
+  background: #ece5d9;
+}
+
 /* ===========================
    RESET
    =========================== */
@@ -374,7 +379,7 @@ body::before {
 .work-tag {
   font-size: 11px;
   color: var(--text-3);
-  background: var(--bg-raised);
+  background: #201b13;
   border: 1px solid var(--border);
   border-radius: var(--r-pill);
   padding: 2px 9px;
@@ -532,7 +537,7 @@ body::before {
 .about-tool {
   font-size: 12px;
   color: var(--text-2);
-  background: var(--bg-raised);
+  background: #201b13;
   border: 1px solid var(--border);
   border-radius: var(--r-pill);
   padding: 4px 12px;
