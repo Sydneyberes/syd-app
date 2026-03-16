@@ -3,18 +3,18 @@
    =========================== */
 
 :root {
-  /* Dark — sumi ink on washi, not cold tech black */
-  --bg:           #0c0a08;
-  --bg-subtle:    #111009;
-  --bg-raised:    #1a1712;
-  --bg-overlay:   rgba(12, 10, 8, 0.72);
-  --text:         #e8dece;
-  --text-2:       #7a6e61;
-  --text-3:       #433c34;
-  --border:       #242018;
-  --border-light: #1c1a14;
-  --placeholder:  #1a1812;
-  --accent:       #b87d4b;   /* warm clay — used sparingly */
+  /* Dark — sumi ink, ash, stone */
+  --bg:           #0e0e0d;
+  --bg-subtle:    #131312;
+  --bg-raised:    #1c1b19;
+  --bg-overlay:   rgba(14, 14, 13, 0.72);
+  --text:         #ddd8d0;
+  --text-2:       #736e68;
+  --text-3:       #434040;
+  --border:       #252422;
+  --border-light: #1e1d1b;
+  --placeholder:  #1c1b19;
+  --accent:       #7a8c82;   /* celadon — muted sage, traditional Japanese */
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -24,19 +24,19 @@
   --ease:   cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* Light — washi paper, natural light */
+/* Light — shoji paper, kinari cloth */
 [data-theme="light"] {
-  --bg:           #f2ebe0;
-  --bg-subtle:    #ede5d8;
-  --bg-raised:    #e6ddd0;
-  --bg-overlay:   rgba(242, 235, 224, 0.72);
-  --text:         #1a1510;
-  --text-2:       #695c4f;
-  --text-3:       #a0907f;
-  --border:       #cfc5b6;
-  --border-light: #ddd5c8;
-  --placeholder:  #ddd5c8;
-  --accent:       #8c5530;
+  --bg:           #f0ece4;
+  --bg-subtle:    #ebe6dd;
+  --bg-raised:    #e4dfd5;
+  --bg-overlay:   rgba(240, 236, 228, 0.72);
+  --text:         #1a1918;
+  --text-2:       #6a6560;
+  --text-3:       #9e9890;
+  --border:       #cdc8c0;
+  --border-light: #d8d3ca;
+  --placeholder:  #d8d3ca;
+  --accent:       #5a7068;   /* celadon — deeper for light mode */
 }
 
 [data-theme="light"] .nav {
@@ -69,14 +69,14 @@
 }
 
 [data-theme="light"] .ref-card {
-  background: #faf6f0;
+  background: #f5f1ea;
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 [data-theme="light"] .work-tag,
 [data-theme="light"] .about-tool {
-  background: #faf6f0;
+  background: #f5f1ea;
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
@@ -139,7 +139,7 @@ body::before {
   gap: 2px;
   padding: 6px 6px 6px 16px;
 
-  background: rgba(14, 11, 8, 0.18);
+  background: rgba(14, 14, 13, 0.18);
   backdrop-filter: blur(20px) saturate(120%);
   -webkit-backdrop-filter: blur(20px) saturate(120%);
 
@@ -383,7 +383,7 @@ body::before {
 .work-tag {
   font-size: 11px;
   color: var(--text-3);
-  background: #1e1912;
+  background: #201f1c;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 2px 9px;
@@ -450,7 +450,7 @@ body::before {
 .ref-card {
   margin: 0;
   padding: 20px 22px;
-  background: #1e1912;
+  background: #201f1c;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   display: flex;
@@ -543,7 +543,7 @@ body::before {
 .about-tool {
   font-size: 12px;
   color: var(--text-2);
-  background: #1e1912;
+  background: #201f1c;
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 4px 12px;
