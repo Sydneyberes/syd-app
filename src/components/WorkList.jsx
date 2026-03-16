@@ -19,7 +19,6 @@ function WorkEntry({ project: p }) {
 
       <Link to={`/work/${p.slug}`} className="work-entry-images">
         <div className="work-entry-img" aria-hidden="true" />
-        <div className="work-entry-img" aria-hidden="true" />
       </Link>
     </article>
   )

@@ -14,7 +14,7 @@
   --border:       #252422;
   --border-light: #1e1d1b;
   --placeholder:  #1c1b19;
-  --accent:       #7a8c82;   /* celadon — muted sage, traditional Japanese */
+  --accent:       #8aaaa4;   /* celadon — blue-green ceramic glaze */
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -36,7 +36,7 @@
   --border:       #cdc8c0;
   --border-light: #d8d3ca;
   --placeholder:  #d8d3ca;
-  --accent:       #5a7068;   /* celadon — deeper for light mode */
+  --accent:       #4d7c75;   /* celadon — deeper for light mode */
 }
 
 [data-theme="light"] .nav {
@@ -390,11 +390,8 @@ body::before {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 2-up image grid */
 .work-entry-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  display: block;
   text-decoration: none;
   transition: opacity 0.2s var(--ease);
 }
@@ -402,7 +399,7 @@ body::before {
 .work-entry-images:hover { opacity: 0.72; }
 
 .work-entry-img {
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 7;
   background: var(--bg-raised);
   border-radius: 6px;
   position: relative;
