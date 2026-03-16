@@ -12,8 +12,7 @@ function WorkEntry({ project: p }) {
         <h3 className="work-entry-title">
           <Link to={`/work/${p.slug}`}>{p.title}</Link>
         </h3>
-        <p className="work-entry-desc">{p.description}</p>
-        <div className="work-tags">
+<div className="work-tags">
           {p.tags.map(tag => (
             <span key={tag} className="work-tag">{tag}</span>
           ))}
