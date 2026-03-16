@@ -545,7 +545,6 @@ body::before {
 
 .about-tool--muted {
   color: var(--text-3);
-  font-style: italic;
 }
 
 /* Headshot placeholder */
