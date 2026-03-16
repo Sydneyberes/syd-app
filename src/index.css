@@ -71,7 +71,7 @@
 [data-theme="light"] .ref-card {
   background: #faf6f0;
   border-color: rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 [data-theme="light"] .work-tag,
@@ -457,7 +457,7 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .ref-quote {
