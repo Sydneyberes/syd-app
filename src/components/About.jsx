@@ -16,17 +16,17 @@ function About() {
       <div className="about-grid">
         <div className="about-text">
           <h2>
-            Designer. Occasional overthinker.<br />
-            Usually the one asking why.
+            I help teams level up design,<br />
+            strategy, and user empathy.
           </h2>
           <p>
-            I work at the intersection of research and craft — figuring out
-            what's broken, then making the fix feel obvious in hindsight.
-            Mostly I just care that things work well for the people using them.
+            I'm delighted by creating elegant digital products driven by
+            user research — and by the process of getting there. I care about
+            the craft as much as the outcome.
           </p>
           <p>
-            Based in Los Angeles. Fueled by California light, Mexico City
-            street food, and jazz I can't name.
+            Based in Los Angeles. Inspired by human psychology, California
+            light, Mexico City, and anything quietly well-made.
           </p>
 
           <div className="about-tools">
