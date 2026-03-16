@@ -21,7 +21,7 @@
   --bg:           var(--n-900);
   --bg-subtle:    var(--n-950);
   --bg-raised:    var(--n-800);
-  --bg-overlay:   rgba(44, 44, 40, 0.72);
+  --bg-overlay:   rgba(252, 252, 243, 0.08);
   --text:         var(--n-100);
   --text-2:       var(--n-400);
   --text-3:       var(--n-500);
@@ -57,7 +57,7 @@
   --bg:           var(--n-0);
   --bg-subtle:    var(--n-50);
   --bg-raised:    var(--n-100);
-  --bg-overlay:   rgba(252, 252, 243, 0.72);
+  --bg-overlay:   rgba(252, 252, 243, 0.88);
   --text:         var(--n-900);
   --text-2:       var(--n-600);
   --text-3:       var(--n-500);
