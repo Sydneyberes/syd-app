@@ -99,6 +99,7 @@
 [data-theme="light"] .work-tag,
 [data-theme="light"] .about-tool {
   background: var(--n-50);
+  border-width: 0.5px;
   border-color: rgba(0, 0, 0, 0.06);
 }
 
@@ -256,7 +257,7 @@ body::before {
 }
 
 .hero-name {
-  font-size: 15px;
+  font-size: clamp(18px, 2.2vw, 24px);
   font-weight: 500;
   color: var(--text);
   margin: 0 0 10px;
@@ -266,7 +267,7 @@ body::before {
 .hero-summary {
   font-size: 15px;
   color: var(--text-2);
-  line-height: 1.75;
+  line-height: 1.6;
   max-width: 400px;
   margin: 0 0 14px;
 }
@@ -438,7 +439,7 @@ body::before {
   font-size: 11px;
   color: var(--text-3);
   background: var(--n-800);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 2px 9px;
 }
@@ -602,7 +603,7 @@ body::before {
   margin: 0;
   padding: 20px 22px;
   background: var(--n-800);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -613,7 +614,7 @@ body::before {
 
 .ref-quote {
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.6;
   color: var(--text-2);
   margin: 0;
   font-weight: 400;
@@ -667,7 +668,7 @@ body::before {
 .about-text p {
   font-size: 15px;
   color: var(--text-2);
-  line-height: 1.75;
+  line-height: 1.6;
   max-width: 480px;
   margin: 0 0 12px;
 }
@@ -688,7 +689,7 @@ body::before {
   font-size: 11px;
   color: var(--text-2);
   background: var(--n-800);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
   border-radius: var(--r-pill);
   padding: 4px 12px;
 }
@@ -762,7 +763,7 @@ body::before {
 .work-detail-sub {
   font-size: 15px;
   color: var(--text-2);
-  line-height: 1.75;
+  line-height: 1.6;
   margin: 0;
   max-width: 520px;
 }
