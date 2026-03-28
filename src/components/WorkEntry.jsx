@@ -18,18 +18,11 @@ function WorkEntry({ project: p }) {
           ))}
         </div>
         <Link to={`/work/${p.slug}`} className="work-entry-cta">
-          View case study →
+          View project →
         </Link>
       </div>
 
-      {p.preview
-        ? <ProjectPreview preview={p.preview} />
-        : (
-          <Link to={`/work/${p.slug}`} className="work-entry-images">
-            <div className="work-entry-img" aria-hidden="true" />
-          </Link>
-        )
-      }
+      <ProjectPreview preview={p.preview ?? { frames: [] }} />
     </article>
   )
 }

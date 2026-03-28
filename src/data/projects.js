@@ -13,16 +13,29 @@ const projects = [
       'I spend most of my time at Curri figuring out how to make logistics software feel less like logistics software. That means a lot of research, a lot of simplification, and building a design system the whole team can actually use.',
     type: 'web',
     preview: {
-      aspect: '16 / 7',
-      frames: [
-        // { id: 'overview', label: 'Overview', src: '/previews/curri/overview.webp', alt: 'Curri dispatcher dashboard', caption: 'Dispatcher dashboard — v2' },
-        // { id: 'mobile',   label: 'Mobile',   src: '/previews/curri/mobile.webp',   alt: 'Curri driver mobile app',    caption: 'Driver app — route cards' },
-        // { id: 'system',   label: 'System',   src: '/previews/curri/system.webp',   alt: 'Curri design system',        caption: 'Component library' },
-      ],
+      aspect: '16 / 10',
+      embed: 'https://format-dot-66000807.figma.site',
+      bgImage: '/previews/curri/previewbg.jpg',
     },
   },
   {
     id: '02',
+    slug: 'curri-ui3',
+    title: 'Curri UI3',
+    category: 'Design Systems',
+    tags: ['Design Systems', 'Component Library', 'B2B'],
+    year: '2024',
+    description:
+      'Building a design system from the ground up for a fast-moving logistics platform. UI3 gave the whole team a shared language — consistent components, clear tokens, and a foundation that could scale.',
+    type: 'web',
+    preview: {
+      aspect: '16 / 7',
+      bgImage: '/previews/curri%20ui3/bgrummo1.jpg',
+      frames: [],
+    },
+  },
+  {
+    id: '03',
     slug: 'duffl',
     title: 'Duffl',
     category: 'UX Design & Branding',
@@ -33,28 +46,8 @@ const projects = [
     type: 'web',
     preview: {
       aspect: '16 / 7',
-      frames: [
-        // { id: 'home',    label: 'Home',    src: '/previews/duffl/home.webp',    alt: 'Duffl home screen',    caption: 'Home — redesigned browse' },
-        // { id: 'brand',   label: 'Brand',   src: '/previews/duffl/brand.webp',   alt: 'Duffl brand system',   caption: 'Brand refresh' },
-      ],
-    },
-  },
-  {
-    id: '03',
-    slug: 'rummo',
-    title: 'Rummo',
-    category: 'SaaS Product',
-    tags: ['UX Design', 'Task Analysis', 'SaaS'],
-    year: '2022',
-    description:
-      'Fleet management is genuinely complicated. At Rummo I designed the knowledge and program creation flow — the hard part was figuring out how to make something that experts use every day feel intuitive to someone new.',
-    type: 'web',
-    preview: {
-      aspect: '16 / 7',
-      frames: [
-        // { id: 'flow',    label: 'Flow',    src: '/previews/rummo/flow.webp',    alt: 'Rummo program creation flow', caption: 'Program creation — step 1' },
-        // { id: 'details', label: 'Details', src: '/previews/rummo/details.webp', alt: 'Rummo detail view',           caption: 'Knowledge detail view' },
-      ],
+      bgImage: '/previews/duffl/bgduffle.jpg',
+      frames: [],
     },
   },
 ]

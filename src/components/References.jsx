@@ -3,18 +3,20 @@ import testimonials from '../data/testimonials'
 function References() {
   return (
     <section className="section" id="references">
-      <p className="section-label">References</p>
-      <div className="ref-grid">
-        {testimonials.map((t) => (
-          <blockquote key={t.id} className="ref-card">
-            <p className="ref-quote">"{t.quote}"</p>
-            <footer className="ref-author">
-              <span className="ref-name">{t.name}</span>
-              <span className="ref-sep">·</span>
-              <span className="ref-title">{t.title}, {t.company}</span>
-            </footer>
-          </blockquote>
-        ))}
+      <div className="ref-layout">
+        <p className="section-label">Kind words</p>
+        <div className="ref-list">
+          {testimonials.map((t) => (
+            <blockquote key={t.id} className="ref-row">
+              <p className="ref-quote">"{t.quote}"</p>
+              <footer className="ref-meta">
+                <span className="ref-name">{t.name}</span>
+                <span className="ref-sep">·</span>
+                <span className="ref-role">{t.title}, {t.company}</span>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
       </div>
     </section>
   )

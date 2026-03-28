@@ -1,9 +1,29 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function Nav() {
   const navRef = useRef(null)
   const [spotlight, setSpotlight] = useState({ x: 50, y: 50, visible: false })
+  const [overLight, setOverLight] = useState(false)
+
+  useEffect(() => {
+    function checkOverLight() {
+      const nav = navRef.current
+      if (!nav) return
+      const navRect = nav.getBoundingClientRect()
+      const previews = document.querySelectorAll('.preview-outer')
+      let over = false
+      previews.forEach(p => {
+        const r = p.getBoundingClientRect()
+        if (navRect.bottom > r.top && navRect.top < r.bottom) over = true
+      })
+      setOverLight(over)
+    }
+
+    window.addEventListener('scroll', checkOverLight, { passive: true })
+    checkOverLight()
+    return () => window.removeEventListener('scroll', checkOverLight)
+  }, [])
 
   function handleMouseMove(e) {
     const rect = navRef.current.getBoundingClientRect()
@@ -19,7 +39,7 @@ function Nav() {
   return (
     <nav
       ref={navRef}
-      className="nav"
+      className={`nav${overLight ? ' nav--over-light' : ''}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -36,7 +56,7 @@ function Nav() {
       <ul className="nav-links">
         <li><a href="/#work">Work</a></li>
         <li><a href="/#about">About</a></li>
-        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/blog">Thoughts</Link></li>
       </ul>
       <a href="mailto:hello@sydneyberes.com" className="nav-cta">Say hello</a>
     </nav>

@@ -7,7 +7,7 @@ function Hero() {
         <a href="https://curri.com" target="_blank" rel="noreferrer">Curri</a>,
         {' '}previously{' '}
         <a href="https://duffl.com" target="_blank" rel="noreferrer">Duffl</a>.
-        {' '}I thrive in spaces without playbooks — where creative thinking and
+        {' '}I thrive in spaces without playbooks, where creative thinking and
         fast learning matter most. I'm happiest helping teams navigate ambiguity,
         find their rhythm, and ship things worth putting our names on.
       </p>
